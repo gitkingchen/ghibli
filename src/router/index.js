@@ -72,18 +72,18 @@ export const constantRouterMap = [
       }
     ]
   },
-  // {
-  //   path: '/priceList',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       name: '价格列表',
-  //       component: () => import('@/views/price/index'),
-  //       meta: { title: '价格列表', icon: 'form' }
-  //     }
-  //   ]
-  // },
+  {
+    path: '/tools',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: '常用工具',
+        component: () => import('@/views/tools/index'),
+        meta: { title: '常用工具', icon: 'form' }
+      }
+    ]
+  },
   // {
   //   path: '/orderList',
   //   component: Layout,

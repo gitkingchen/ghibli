@@ -1,0 +1,111 @@
+/*commmon*/
+body{
+	padding: 20px;
+}
+
+strong{
+	display:block;
+	margin: 30px 0 10px;
+}
+
+img{
+	border: 1px solid #000;
+}
+
+.title{
+	font-weight: bold;
+}
+
+.des{
+	color:#666;
+}
+
+
+/*commmon*/
+
+/*image-text*/
+.demo1 {
+	font-size: 0;
+	img {
+		vertical-align: middle;
+	}
+	span {
+		display: inline-block;
+		max-width: 120px;
+		font-size: 16px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		vertical-align: middle;
+	}
+}
+
+.demo2 {
+	font-size: 0;
+	img {
+		vertical-align: middle;
+	}
+	div {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 16px;
+	}
+	p {
+		max-width: 120px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		vertical-align: middle;
+	}
+}
+
+.demo3 {
+	font-size: 0;
+	img {
+		vertical-align: middle;
+	}
+	div {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 16px;
+	}
+	p {
+		max-width: 120px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		vertical-align: middle;
+	}
+}
+
+.demo4 {
+	font-size: 0;
+	img {
+		vertical-align: middle;
+	}
+	div {
+		max-width: 120px;
+		font-size: 16px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	p {
+		&.title {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		&.des {
+			display: -webkit-box;
+			height: 44px;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+	}
+}
+
+
+
+
+/*image-text*/
