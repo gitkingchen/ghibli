@@ -17,11 +17,11 @@ img {
 
 /*commmon*/
 /*image-text*/
-.demo1 {
+.demo1_1 {
   font-size: 0; }
-  .demo1 img {
+  .demo1_1 img {
     vertical-align: middle; }
-  .demo1 span {
+  .demo1_1 span {
     display: inline-block;
     max-width: 120px;
     font-size: 16px;
@@ -30,74 +30,74 @@ img {
     white-space: nowrap;
     vertical-align: middle; }
 
-.demo2 {
+.demo1_2 {
   font-size: 0; }
-  .demo2 img {
+  .demo1_2 img {
     vertical-align: middle; }
-  .demo2 div {
+  .demo1_2 div {
     display: inline-block;
     vertical-align: middle;
     font-size: 16px; }
-  .demo2 p {
+  .demo1_2 p {
     max-width: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     vertical-align: middle; }
 
-.demo3 {
+.demo1_3 {
   font-size: 0; }
-  .demo3 img {
+  .demo1_3 img {
     vertical-align: middle; }
-  .demo3 div {
+  .demo1_3 div {
     display: inline-block;
     vertical-align: middle;
     font-size: 16px; }
-  .demo3 p {
+  .demo1_3 p {
     max-width: 120px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     vertical-align: middle; }
 
-.demo4 {
+.demo1_4 {
   font-size: 0; }
-  .demo4 img {
+  .demo1_4 img {
     vertical-align: middle; }
-  .demo4 div {
+  .demo1_4 div {
     max-width: 120px;
     font-size: 16px;
     display: inline-block;
     vertical-align: middle; }
-  .demo4 p.tit {
+  .demo1_4 p.tit {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
-  .demo4 p.des {
+  .demo1_4 p.des {
     display: -webkit-box;
     height: 44px;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden; }
 
-.demo5 {
+.demo1_5 {
   font-size: 0; }
-  .demo5 img {
+  .demo1_5 img {
     vertical-align: middle; }
-  .demo5 div {
+  .demo1_5 div {
     max-width: 120px;
     font-size: 16px;
     display: inline-block;
     vertical-align: middle; }
-  .demo5 p.tit {
+  .demo1_5 p.tit {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
-  .demo5 p.des {
+  .demo1_5 p.des {
     position: relative;
     max-height: 2.7em;
     overflow: hidden; }
-    .demo5 p.des::before {
+    .demo1_5 p.des::before {
       content: '...';
       position: absolute;
       z-index: 1;
@@ -107,7 +107,7 @@ img {
       padding-left: 3px;
       box-sizing: border-box;
       background-color: white; }
-    .demo5 p.des::after {
+    .demo1_5 p.des::after {
       content: '';
       position: absolute;
       z-index: 2;
@@ -115,20 +115,31 @@ img {
       height: 100%;
       background-color: white; }
 
-.demo6 {
+.demo1_6 {
   font-size: 0; }
-  .demo6 img {
+  .demo1_6 img {
     vertical-align: middle; }
-  .demo6 div {
+  .demo1_6 div {
     max-width: 120px;
     font-size: 16px;
     display: inline-block;
     vertical-align: middle; }
-  .demo6 p.tit {
+  .demo1_6 p.tit {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
-  .demo6 p.des {
+  .demo1_6 p.des {
     visibility: hidden; }
 
 /*image-text*/
+/*icon-text*/
+.demo2_1 {
+  display: inline-block;
+  background: url(https://p4.ssl.qhimg.com/t01b7ac355f2e6eda37.png) no-repeat 0 center;
+  padding-left: 18px; }
+  .demo2_1:after {
+    content: attr(data-likenum); }
+
+/*icon-text*/
+/*special-icon*/
+/*special-icon*/

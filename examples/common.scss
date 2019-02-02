@@ -24,7 +24,7 @@ img{
 /*commmon*/
 
 /*image-text*/
-.demo1 {
+.demo1_1 {
 	font-size: 0;
 	img {
 		vertical-align: middle;
@@ -40,7 +40,7 @@ img{
 	}
 }
 
-.demo2 {
+.demo1_2 {
 	font-size: 0;
 	img {
 		vertical-align: middle;
@@ -59,7 +59,7 @@ img{
 	}
 }
 
-.demo3 {
+.demo1_3 {
 	font-size: 0;
 	img {
 		vertical-align: middle;
@@ -78,7 +78,7 @@ img{
 	}
 }
 
-.demo4 {
+.demo1_4 {
 	font-size: 0;
 	img {
 		vertical-align: middle;
@@ -105,7 +105,7 @@ img{
 	}
 }
 
-.demo5 {
+.demo1_5 {
 	font-size: 0;
 	img {
 		vertical-align: middle;
@@ -149,7 +149,7 @@ img{
 	}
 }
 
-.demo6 {
+.demo1_6 {
 	font-size: 0;
 	img {
 		vertical-align: middle;
@@ -172,7 +172,22 @@ img{
 	}
 }
 
-
-
-
 /*image-text*/
+
+/*icon-text*/
+.demo2_1{
+	display: inline-block;
+	background: url(https://p4.ssl.qhimg.com/t01b7ac355f2e6eda37.png) no-repeat 0 center;
+	padding-left:18px;
+	&:after{
+		content: attr(data-likenum);
+	}
+}
+
+/*icon-text*/
+
+/*special-icon*/
+
+
+
+/*special-icon*/

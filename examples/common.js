@@ -1,6 +1,6 @@
 
 $(function() {
-	var $ele = $('.demo6 .des');
+	var $ele = $('.demo1_6 .des');
 	var maxH = 44;
 	if($ele.height() <= maxH) {
 		$ele.height("auto");
