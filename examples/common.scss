@@ -16,6 +16,38 @@ strong{
 	color:#666;
 }
 
+.warning{
+	background-color: #ff9523;
+}
+
+.primary{
+	background-color: #1ca9ff;
+}
+
+.danger{
+	background-color: #ff5757;
+}
+
+.info{
+	background-color: #e1d8d8;
+}
+
+.indent2{
+	text-indent: 2em;
+}
+
+.indent4{
+	text-indent: 4em;
+}
+
+.indent6{
+	text-indent: 6em;
+}
+
+.pad10{
+	padding: 10px;
+}
+
 
 /*commmon*/
 
@@ -289,3 +321,225 @@ strong{
 
 
 /*triangle-icon*/
+
+/*selector*/
+:root {
+	background-color: #eee;
+}
+[class~="demo5_1"],[class~="demo5_2"],[class~="demo5_3"],[class~="demo5_4"],[class~="demo5_5"]
+		,[class~="demo5_10"],[class~="demo5_11"] {
+	width: 500px;
+}
+.demo5_1 {
+	& > p {
+		background-color: #000;
+		color: #fff;
+	}
+}
+.demo5_2 {
+	div {
+		&.demo5_2_2 {
+			& + div {
+				background-color: #000;
+				color: #fff;
+			}
+		}
+	}
+}
+.demo5_3 {
+	div {
+		&.demo5_3_2 {
+			& ~ div {
+				background-color: #000;
+				color: #fff;
+			}
+		}
+	}
+}
+.demo5_4 {
+	div[title] {
+		background-color: red;
+	}
+	div[data-abc="123"] {
+		background-color: purple;
+	}
+	div[data-abc~="456"] {
+		background-color: pink;
+	}
+	div[data-abc|="456"] {
+		background-color: yellow;
+	}
+	div[data-abc^="5"] {
+		background-color: orange;
+	}
+	div[data-abc$="8"] {
+		background-color: gray;
+	}
+	div[data-abc*="a"] {
+		background-color: green;
+	}
+}
+.demo5_5 {
+	a {
+		display: block;
+		width: 100px;
+	}
+}
+.demo5_5_1 {
+	&:link {
+		color: seagreen;
+	}
+}
+.demo5_5_2 {
+	&:visited {
+		color: orangered;
+	}
+}
+.demo5_5_3 {
+	&:hover {
+		color: dodgerblue;
+	}
+}
+.demo5_5_4 {
+	&:active {
+		color: violet;
+	}
+}
+.demo5_5_5 {
+	&:disabled {
+		background-color: lightgray;
+	}
+}
+.demo5_5_6 {
+	&:checked {
+		opacity: .5;
+	}
+}
+.demo5_5_7 {
+	&::selection {
+		color: tomato;
+	}
+}
+.demo5_5_8 {
+	&:focus {
+		color: turquoise;
+	}
+}
+.demo5_5_9 {
+	&:lang(zh) {
+		color: royalblue;
+	}
+}
+.demo5_6 {
+	div {
+		&:nth-child(3) {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+}
+.demo5_7 {
+	div {
+		&:nth-child(n+2) {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+}
+.demo5_8 {
+	div {
+		&:nth-child(even) {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+}
+.demo5_9 {
+	div {
+		&:nth-last-child(1) {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+}
+.demo5_10 {
+	p {
+		&:nth-child(1) {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+}
+.demo5_11 {
+	p {
+		&:nth-of-type(1) {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+}
+.demo5_12 {
+	div {
+		&:first-child {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+}
+.demo5_13 {
+	div {
+		&:only-child {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+}
+.demo5_14 {
+	div {
+		&:empty {
+			height: 20px;
+			background-color: red;
+		}
+	}
+}
+.demo5_15 {
+	input {
+		&:not([type="submit"]) {
+			color: red;
+		}
+	}
+}
+.demo5_16 {
+	&::first-line {
+		background-color: #000;
+		color: #fff;
+	}
+}
+.demo5_17 {
+	&::first-letter {
+		background-color: #000;
+		color: #fff;
+	}
+}
+.demo5_18 {
+	&::before {
+		content: 'insert before';
+		background-color: #000;
+		color: #fff;
+	}
+}
+.demo5_19 {
+	&::after {
+		content: 'insert after';
+		background-color: #000;
+		color: #fff;
+	}
+}
+
+:target {
+  	background-color: #000;
+	color: #fff;
+}
+
+
+/*selector*/
