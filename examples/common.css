@@ -367,7 +367,7 @@ strong {
   background-color: #000;
   color: #fff; }
 
-:target {
+.demo5_20 :target {
   background-color: #000;
   color: #fff; }
 
