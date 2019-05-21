@@ -12,12 +12,13 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+
 import '@/icons' // icon
 import '@/permission' // permission control
 
-Vue.use(ElementUI, { locale })
+Vue.config.productionTip = false;
 
-Vue.config.productionTip = false
+Vue.use(ElementUI, { locale })
 
 new Vue({
   el: '#app',
@@ -25,3 +26,4 @@ new Vue({
   store,
   render: h => h(App)
 })
+

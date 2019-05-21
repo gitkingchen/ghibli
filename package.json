@@ -15,10 +15,12 @@
   },
   "dependencies": {
     "axios": "0.18.0",
+    "babel-plugin-prismjs": "^1.0.2",
     "element-ui": "2.4.6",
     "js-cookie": "2.2.0",
     "normalize.css": "7.0.0",
     "nprogress": "0.2.0",
+    "prismjs": "^1.16.0",
     "qs": "^6.6.0",
     "vue": "2.5.17",
     "vue-router": "3.0.1",
