@@ -6,15 +6,8 @@
       "prismjs",
       {
         "css": true,
-        "languages": [
-          "javascript",
-          "css",
-          "markup"
-        ],
-        "plugins": [
-          "copy-to-clipboard",
-          "show-language"
-        ],
+        "languages": ["javascript", "css", "markup", "scss"],
+        "plugins": ["copy-to-clipboard", "show-language", "unescaped-markup"],
         "theme": "okaidia"
       }
     ]
@@ -25,11 +18,7 @@
       {
         "modules": false,
         "targets": {
-          "browsers": [
-            "> 1%",
-            "last 2 versions",
-            "not ie <= 8"
-          ]
+          "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
         }
       }
     ],
