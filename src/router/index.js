@@ -338,6 +338,18 @@ export const constantRouterMap = [
       }
     ]
   },
+  {
+    path: "/aboutme",
+    component: Layout,
+    children: [
+      {
+        path: "index",
+        name: "关于我",
+        component: () => import("@/views/aboutme/index"),
+        meta: { title: "关于我", icon: "form" }
+      }
+    ]
+  },
   
 
   { path: "*", redirect: "/404", hidden: true }
