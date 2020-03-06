@@ -326,6 +326,18 @@ export const constantRouterMap = [
       }
     ]
   },
+  {
+    path: "/myshare",
+    component: Layout,
+    children: [
+      {
+        path: "index",
+        name: "我的分享",
+        component: () => import("@/views/myshare/index"),
+        meta: { title: "我的分享", icon: "form" }
+      }
+    ]
+  },
   
 
   { path: "*", redirect: "/404", hidden: true }
