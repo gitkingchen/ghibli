@@ -339,6 +339,18 @@ export const constantRouterMap = [
     ]
   },
   {
+    path: "/mybooks",
+    component: Layout,
+    children: [
+      {
+        path: "index",
+        name: "读过的书",
+        component: () => import("@/views/mybooks/index"),
+        meta: { title: "读过的书", icon: "form" }
+      }
+    ]
+  },
+  {
     path: "/aboutme",
     component: Layout,
     children: [
