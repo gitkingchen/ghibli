@@ -118,6 +118,12 @@ export const constantRouterMap = [
             component: () => import("@/views/quicklayout/backtop/backtop-7"),
             name: "backtop-7",
             meta: { title: "backtop-7", icon: "form" }
+          },
+          {
+            path: "backtop-8",
+            component: () => import("@/views/quicklayout/backtop/backtop-8"),
+            name: "backtop-8",
+            meta: { title: "backtop-8", icon: "form" }
           }
         ]
       },
