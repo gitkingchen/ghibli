@@ -118,6 +118,12 @@ export const constantRouterMap = [
             component: () => import("@/views/quicklayout/backtop/backtop-7"),
             name: "backtop-7",
             meta: { title: "backtop-7", icon: "form" }
+          },
+          {
+            path: "backtop-8",
+            component: () => import("@/views/quicklayout/backtop/backtop-8"),
+            name: "backtop-8",
+            meta: { title: "backtop-8", icon: "form" }
           }
         ]
       },
@@ -252,6 +258,18 @@ export const constantRouterMap = [
         name: "base",
         component: () => import("@/views/regular/base"),
         meta: { title: "base", icon: "form" }
+      }
+    ]
+  },
+  {
+    path: "/gitoperate",
+    component: Layout,
+    children: [
+      {
+        path: "index",
+        name: "git操作",
+        component: () => import("@/views/gitoperate/index"),
+        meta: { title: "git操作", icon: "form" }
       }
     ]
   },
