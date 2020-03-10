@@ -262,6 +262,18 @@ export const constantRouterMap = [
     ]
   },
   {
+    path: "/gitoperate",
+    component: Layout,
+    children: [
+      {
+        path: "index",
+        name: "git操作",
+        component: () => import("@/views/gitoperate/index"),
+        meta: { title: "git操作", icon: "form" }
+      }
+    ]
+  },
+  {
     path: "/tools",
     component: Layout,
     children: [
