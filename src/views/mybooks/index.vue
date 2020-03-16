@@ -28,31 +28,31 @@ export default {
     return {
       list: [
         {
-          title: "精通CSS + DIV"
+          title: "《精通CSS + DIV》"
         }, {
-          title: "javascript DOM 编程艺术"
+          title: "《javascript DOM 编程艺术》"
         }, {
-          title: "锋利的jquery "
+          title: "《锋利的jquery》"
         }, {
-          title: "javascript 权威指南"
+          title: "《javascript 权威指南》"
         }, {
-          title: "javascript 高级程序设计"
+          title: "《javascript 高级程序设计》"
         }, {
-          title: "html5与css3权威指南"
+          title: "《html5与css3权威指南》"
         },{
-          title: "编写高质量代码"
+          title: "《编写高质量代码》"
         },{
-          title: "javascript 语言精粹"
+          title: "《javascript 语言精粹》"
         },{
-          title: "响应式web设计"
+          title: "《响应式web设计》"
         },{
-          title: "活法"
+          title: "《活法》"
         },{
-          title: "干法"
+          title: "《干法》"
         },{
-          title: "做最好的自己"
+          title: "《做最好的自己》"
         },{
-          title: "HTTP 权威指南"
+          title: "《HTTP 权威指南》"
         },
 
 
