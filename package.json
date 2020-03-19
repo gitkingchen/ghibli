@@ -5,12 +5,11 @@
   "description": "Exclusive tool",
   "author": "kerrie <kingdream90@163.com>",
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "serve": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "build": "node build/build.js",
-    "build:report": "npm_config_report=true npm run build",
+    "build:report": "npm_config_report=true yarn build",
     "lint": "eslint --ext .js,.vue src",
-    "test": "npm run lint",
+    "test": "yarn lint",
     "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml"
   },
   "dependencies": {

@@ -3,13 +3,13 @@
 
 ``` bash
 # 安装依赖
-npm install
+yarn
 
 # 开发调试 访问localhost:6789
-npm run dev
+yarn serve
 
 # 打包编译
-npm run build
+yarn build
 
 ```
 
