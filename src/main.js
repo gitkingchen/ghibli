@@ -16,6 +16,11 @@ import $ from "jquery";
 import "@/icons"; // icon
 import "@/permission"; // permission control
 
+//挂载全局
+//import echarts from 'echarts'
+//Vue.prototype.$echarts = echarts
+//访问方式：this.$echarts.init()
+
 Vue.config.productionTip = false;
 
 Vue.use(ElementUI, { locale });
