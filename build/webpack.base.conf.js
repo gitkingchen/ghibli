@@ -24,9 +24,9 @@ const createLintingRule = () => ({
 module.exports = {
   externals: {//后面是业务逻辑用的
       //'vue': 'Vue',
-      jQuery: "jquery",
-      $: "jquery",
-      "echarts": "echarts"
+      // jQuery: "jquery",
+      // $: "jquery",
+      // "echarts": "echarts"
   },
   context: path.resolve(__dirname, "../"),
   entry: {
