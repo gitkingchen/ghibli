@@ -11,14 +11,14 @@
 
 //改为全局cdn引入了
 
-import route from '@/assets/map/route.json';
-//没有引用route.js ，因为访问不到echarts
-echarts.registerMap('route', route);
+//import mapRoute from '@/assets/map/mapRoute.json';
+//没有引用mapRoute.js ，因为访问不到echarts
+echarts.registerMap('mapRoute', mapRoute);
 //const echarts = require('echarts');
-//import '@/assets/map/route';
-// require('@/assets/map/route')
+//import '@/assets/map/mapRoute';
+// require('@/assets/map/mapRoute')
 //import d from '@/assets/map/china';
-//import 'echarts/map/js/route';
+//import 'echarts/map/js/mapRoute';
 
 var nameMap = {
 	"Tokyo":"东京",
@@ -39,7 +39,7 @@ export default {
   		var option = {
 		   	backgroundColor: '#1D346F',
 		    geo: {
-		        map: "route",
+		        map: "mapRoute",
 		        nameMap:nameMap,
 		        roam: true,
 		        top: 120,
