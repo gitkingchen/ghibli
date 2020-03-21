@@ -22,6 +22,12 @@ const createLintingRule = () => ({
 });
 
 module.exports = {
+  externals: {//后面是业务逻辑用的
+      //'vue': 'Vue',
+      // jQuery: "jquery",
+      // $: "jquery",
+      //"echarts": "echarts"
+  },
   context: path.resolve(__dirname, "../"),
   entry: {
     app: "./src/main.js"
@@ -94,10 +100,9 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    new webpack.ProvidePlugin({
-      jQuery: "jquery",
-      $: "jquery"
-    })
+    // new webpack.ProvidePlugin({//不用import require 偷懒
+    //   
+    // })
   ],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue

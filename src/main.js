@@ -11,10 +11,16 @@ import "@/styles/index.scss"; // global css
 import App from "./App";
 import router from "./router";
 import store from "./store";
-import $ from "jquery";
+//import $ from "jquery";
+
 
 import "@/icons"; // icon
 import "@/permission"; // permission control
+
+//挂载全局
+//import echarts from 'echarts'
+//Vue.prototype.$echarts = echarts
+//访问方式：this.$echarts.init()
 
 Vue.config.productionTip = false;
 
