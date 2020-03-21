@@ -7,7 +7,10 @@
 <style rel="stylesheet/scss" lang="scss" scoped>
 </style>
 <script>
-import echarts from 'echarts';
+//import echarts from 'echarts';
+
+//改为全局cdn引入了
+
 import route from '@/assets/map/route.json';
 //没有引用route.js ，因为访问不到echarts
 echarts.registerMap('route', route);
