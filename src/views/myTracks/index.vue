@@ -264,35 +264,21 @@ export default {
 			  		map: "china",
 			  		roam:true,
 			        nameMap:nameMap,
-			        // itemStyle: {
-           //              normal: {
-           //                  borderColor: 'rgba(147, 235, 248, 1)',
-           //                  borderWidth: 1,
-           //                  areaColor: {
-           //                      type: 'radial',
-           //                      x: 0.5,
-           //                      y: 0.5,
-           //                      r: 0.8,
-           //                      colorStops: [{
-           //                          offset: 0,
-           //                          color: 'rgba(147, 235, 248, 0)' // 0% 处的颜色
-           //                      }, {
-           //                          offset: 1,
-           //                          color: 'rgba(147, 235, 248, .2)' // 100% 处的颜色
-           //                      }],
-           //                      globalCoord: false // 缺省为 false
-           //                  },
-           //                  shadowColor: 'rgba(128, 217, 248, 1)',
-           //                  // shadowColor: 'rgba(255, 255, 255, 1)',
-           //                  shadowOffsetX: -2,
-           //                  shadowOffsetY: 2,
-           //                  shadowBlur: 10
-           //              },
-           //              emphasis: {
-           //                  areaColor: '#389BB7',
-           //                  borderWidth: 0
-           //              }
-           //          }
+			        label: {
+				        emphasis: {
+				            show: true,
+				            color:'red',
+				        }
+				    },
+			        itemStyle:{
+			        	normal:{
+			        		areaColor: '#F7FBFF',
+                  			borderColor: '#8C98A0',
+			        	},
+			        	emphasis: {
+			                areaColor: '#01FEA8'
+			            }
+			        }
 			    },
 			},
 			options:[
@@ -301,26 +287,24 @@ export default {
 
 		for (var n = 0; n < traData.length; n++) {//渲染每一年的数据，生成点，线，地图数据
 		    option.options.push({
-		        backgroundColor: '#051b4a',
-		        // title: [{
-		        //         /* text: '地图',
-		        //          subtext: '内部数据请勿外传',
-		        //          left: 'center',
-		        //          textStyle: {
-		        //              color: '#fff'
-		        //          }*/
-		        //     },
-		        //     {
-		        //         id: 'statistic',
-		        //         text: year[n] + "年数据统计情况",
-		        //         left: '75%',
-		        //         top: '8%',
-		        //         textStyle: {
-		        //             color: '#fff',
-		        //             fontSize: 30
-		        //         }
-		        //     }
-		        // ],
+		        backgroundColor: '#111111',
+		        title: [{
+		                text: '我的足迹',
+		                subtext: '那些年走过的路，趟过的水\n点标记查看游记',
+		                left: '75%',
+		                top: '8%',
+		                textStyle: {
+		                    color: '#04B9FF',
+		                    fontSize: 30,
+		                },
+		                subtextStyle:{
+		                	color:'#fff',
+		                	fontSize:14,
+		                	lineHeight:22
+
+		                }
+		            }
+		        ],
 		        series: [
 		            //未知作用
 		            {
@@ -329,11 +313,22 @@ export default {
 		                type: 'scatter',
 		                coordinateSystem: 'geo',
 		                data: convertPointData(n),
-		                symbolSize:10,
+		                symbolSize:16,
 		                label: {
 		                    normal: {
+		                    	color:'#777777',
+		                    	fontWeight:'bolder',
+		                    	fontSize:14,
+		                    	backgroundColor:'#0DF4FD',
+		                    	borderColor:'#7D7C69',
+		                    	borderWidth:1,
+		                    	borderRadius:3,
+		                    	padding:3,
+
+		                    	verticalAlign:'middle',
 		                        formatter: '{b}',
 		                        position: 'top',
+		                        distance:10,
 		                        show: true
 		                    },
 		                    emphasis: {
@@ -352,27 +347,7 @@ export default {
 		                map: 'china',
 		                geoIndex: 0,
 		                aspectScale: 0.75, //长宽比
-		                label: {
-		                    normal: {
-		                        show: false
-		                    },
-		                    emphasis: {
-		                        show: false,
-		                        textStyle: {
-		                            color: '#fff'
-		                        }
-		                    }
-		                },
 		                roam: true,
-		                itemStyle: {
-		                    normal: {
-		                        areaColor: '#031525',
-		                        borderColor: '#FFFFFF',
-		                    },
-		                    emphasis: {
-		                        areaColor: '#2B91B7'
-		                    }
-		                },
 		                animation: false,
 		            },
 		            //地图点的动画效果
@@ -413,21 +388,20 @@ export default {
 		                zlevel: 2,
 		                polyline:true,//多点
 		                effect: {
+		                	smooth: true,
 		                    show: true,
-		                    period: 6, //箭头指向速度，值越小速度越快
-                            trailLength: 0.02, //特效尾迹长度[0,1]值越大，尾迹越长重
-		                    //symbol: 'arrow', //箭头图标
-		                    // symbol:'path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z',
-		                    symbol:"image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAhCAYAAADtR0oPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAB2ElEQVQ4T32USU7DQBBFbcKMAAFigcSSg3ADtmzZc0juwQ6JMA9hCBAG81/Rv9W2HEp6cae7fk1tuW6appLVCWwmPTEOw0H2ww8CHHEaiLmERTh9ic/0bBBwiNOiWE7MCwynsXgVH2KCYFYLnNfFhtgSiMj8Lu4TIzFGQLQ1sS12xZFA8CZuxYk4FVdiRDmwIBDtiH1xIA7FsdgTZF4SA5xJTcNE3RSeio1gq4I+a08DAaWtiBhfMpqmP0T0mgXlaL/ZSMY4icx+3JMFRKUUnozPNhHs+TzuwBtEJiJztzEpAlBaXBwCR0bAIZdkQ2xBBC4FbJLhWdhehAUEzBn4A9SMkw0xe87QKolNDh+FjTUZyEzAXJKzcMA7Y0PgDFNLehC2O9HbQ5mBHnDAeEvLKYUA448z8EozTvZ4W8sessAZEHBZ3AWi8h6ikq6ASGSgrCfRvbj8LiFgk0MEzJ9psfaU8Gm9fGVJRKdhMljQyoCx6ZIYLSN1hmhYtEpik5LIgPNNWpdNt0pik2hEZZyXad1bkpt2D0S/EGUPvSW5Bz4pQ0E5UzN4Sjhdi3Pxb9NEcQbqPxNuGEGYv94Iux9ll1ESH2M9wywyWDj9LWOdM9hKZxsOyamqfgG1ZQ8JFbfSTwAAAABJRU5ErkJggg==",
-		                    symbolSize: 10, //图标大小
+		                    period: 5, //箭头指向速度，值越小速度越快
+                            trailLength: 0, //特效尾迹长度[0,1]值越大，尾迹越长重		                    
+		                    symbol:'path://M432.333 0c58.982 0 114.585 2.15 166.912 6.349 52.224 4.198 98.611 13.926 139.059 29.081 38.81 15.156 69.53 37.07 92.262 65.741 22.733 28.672 34.1 66.663 34.1 113.767v513.228c0 25.293-5.018 49.255-15.156 72.09-10.137 22.733-23.654 42.598-40.448 59.392-18.534 16.896-39.219 30.31-61.952 40.448-22.732 10.138-46.694 15.155-71.987 15.155l80.896 80.896V1024H108.75v-27.853l80.896-80.896c-25.293 0-49.255-5.017-72.09-15.155-22.733-10.138-43.417-23.552-61.952-40.448-16.896-16.794-30.31-36.66-40.448-59.392C5.018 777.523 0 753.459 0 728.166V214.938c0-47.104 11.366-85.095 34.1-113.767 22.732-28.672 53.554-50.585 92.262-65.74 40.55-15.156 86.835-24.884 139.161-29.082C317.747 2.15 373.35 0 432.333 0zM379.29 214.938H108.749v270.54h270.54v-270.54zM189.645 809.062c10.137 0 20.275-2.56 30.31-7.577 10.138-5.018 18.535-10.957 25.293-17.715 8.397-6.656 14.746-15.156 18.944-25.293 4.198-10.035 6.349-20.173 6.349-30.31 0-11.777-2.15-22.324-6.349-31.642-4.198-9.216-10.547-18.023-18.944-26.522-6.758-6.656-15.155-12.185-25.293-16.384-10.137-4.198-20.173-6.349-30.31-6.349-10.138 0-20.275 2.15-30.31 6.35-10.138 4.198-18.535 9.727-25.293 16.383-8.5 8.5-14.746 17.306-19.047 26.522-4.198 9.216-6.349 19.865-6.349 31.641 0 10.138 2.15 20.276 6.35 30.31 4.198 10.138 10.546 18.638 18.943 25.294 6.759 6.758 15.258 12.697 25.293 17.715 10.138 5.017 20.275 7.577 30.413 7.577z m566.374-594.124H485.48v270.54h270.54v-270.54z m-80.896 594.124c10.138 0 20.275-2.56 30.31-7.577 10.138-5.018 18.535-10.957 25.293-17.715 8.397-6.656 14.746-15.156 18.944-25.293 4.199-10.035 6.35-20.173 6.35-30.31 0-11.777-2.151-22.324-6.35-31.642-4.198-9.216-10.547-18.023-18.944-26.522-6.758-6.656-15.155-12.185-25.292-16.384-10.138-4.198-20.276-6.349-30.31-6.349-10.138 0-20.276 2.15-30.311 6.35-10.138 4.198-18.535 9.727-25.293 16.383-8.5 8.5-14.848 17.306-19.046 26.522-4.199 9.216-6.35 19.865-6.35 31.641 0 10.138 2.151 20.276 6.35 30.31 4.198 10.138 10.547 18.638 18.944 25.294 6.758 6.758 15.257 12.697 25.292 17.715 10.138 5.017 20.276 7.577 30.413 7.577z',
+		                    symbolSize: 13, //图标大小
 		                },
 		                lineStyle: {
 		                    normal: {
 		                    	//color:'green',
 		                        //color: colors[n],
-		                        width: 1, //尾迹线条宽度
-		                        opacity: 0.5, //尾迹线条透明度
-		                        curveness: .3 //尾迹线条曲直度
+		                        width: 2, //尾迹线条宽度
+		                        opacity: 0.8, //尾迹线条透明度
+		                        curveness:0.5 //尾迹线条曲直度
 		                    }
 		                },
 		                data: convertLineData(n)
