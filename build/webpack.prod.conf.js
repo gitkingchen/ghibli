@@ -11,6 +11,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin')
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -56,6 +57,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       inject: true,
       favicon: resolve('favicon.ico'),
       title: 'vue-admin-template',
+      chunks: ['runtime', 'app'], // 将runtime插入html中
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -67,10 +69,10 @@ const webpackConfig = merge(baseWebpackConfig, {
       // in certain cases, and in webpack 4, chunk order in HTML doesn't
       // matter anyway
     }),
-    new ScriptExtHtmlWebpackPlugin({
-      //`runtime` must same as runtimeChunk name. default is `runtime`
-      inline: /runtime\..*\.js$/
-    }),
+    // new ScriptExtHtmlWebpackPlugin({
+    //   //`runtime` must same as runtimeChunk name. default is `runtime`
+    //   inline: /runtime\..*\.js$/
+    // }),
     // keep chunk.id stable when chunk has no name
     new webpack.NamedChunksPlugin(chunk => {
       if (chunk.name) {
@@ -95,7 +97,11 @@ const webpackConfig = merge(baseWebpackConfig, {
       from: path.resolve(__dirname, '../static'),
       to: config.build.assetsSubDirectory,
       ignore: ['.*']
-    }])
+    }]),
+    new InlineManifestWebpackPlugin('runtime')
+    // new webpack.optimize.RuntimeChunkPlugin({
+    //   name: "manifest"
+    // }),
   ],
   optimization: {
     splitChunks: {
