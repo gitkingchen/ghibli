@@ -1,7 +1,20 @@
+个人网站
 
-## 启动
+> 涵盖总结的知识点以及生活
 
-``` bash
+### 技术栈
+
+- Vue2.0
+- Vue-Router
+- Element-UI
+- Axios
+- Echarts
+
+---
+
+### 启动
+
+```bash
 # 安装依赖
 yarn
 
@@ -12,4 +25,3 @@ yarn serve
 yarn build
 
 ```
-
