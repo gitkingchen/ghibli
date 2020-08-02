@@ -22,13 +22,16 @@ import Layout from "../views/layout/Layout";
     breadcrumb: false            if false, the item will hidden in breadcrumb(default is true)
   }
 **/
-export const constantRouterMap = [
-  {
+export const constantRouterMap = [{
     path: "/login",
     component: () => import("@/views/login/index"),
     hidden: true
   },
-  { path: "/404", component: () => import("@/views/404"), hidden: true },
+  {
+    path: "/404",
+    component: () => import("@/views/404"),
+    hidden: true
+  },
 
   {
     path: "/",
@@ -51,79 +54,113 @@ export const constantRouterMap = [
       icon: "nested"
     },
     alwaysShow: true,
-    children: [
-      {
+    children: [{
         path: "image-text",
         name: "Image-Text",
         component: () => import("@/views/quicklayout/image-text"),
-        meta: { title: "image-text", icon: "form" }
+        meta: {
+          title: "image-text",
+          icon: "form"
+        }
       },
       {
         path: "icon-text",
         name: "Icon-Text",
         component: () => import("@/views/quicklayout/icon-text"),
-        meta: { title: "icon-text", icon: "form" }
+        meta: {
+          title: "icon-text",
+          icon: "form"
+        }
       },
       {
         path: "css3-scrollbar",
         name: "Css3-scrollbar",
         component: () => import("@/views/quicklayout/css3-scrollbar"),
-        meta: { title: "css3-scrollbar", icon: "form" }
+        meta: {
+          title: "css3-scrollbar",
+          icon: "form"
+        }
       },
       {
         path: "backtop",
         component: () => import("@/views/quicklayout/backtop/index"), // Parent router-view
         name: "backtop",
-        meta: { title: "backtop(0/anchor)", icon: "form" },
+        meta: {
+          title: "backtop(0/anchor)",
+          icon: "form"
+        },
         redirect: "/quicklayout/backtop/backtop-1",
-        children: [
-          {
+        children: [{
             path: "backtop-1",
             component: () => import("@/views/quicklayout/backtop/backtop-1"),
             name: "backtop-1",
-            meta: { title: "backtop-1", icon: "form" }
+            meta: {
+              title: "backtop-1",
+              icon: "form"
+            }
           },
           {
             path: "backtop-2",
             component: () => import("@/views/quicklayout/backtop/backtop-2"),
             name: "backtop-2",
-            meta: { title: "backtop-2", icon: "form" }
+            meta: {
+              title: "backtop-2",
+              icon: "form"
+            }
           },
           {
             path: "backtop-3",
             component: () => import("@/views/quicklayout/backtop/backtop-3"),
             name: "backtop-3",
-            meta: { title: "backtop-3", icon: "form" }
+            meta: {
+              title: "backtop-3",
+              icon: "form"
+            }
           },
           {
             path: "backtop-4",
             component: () => import("@/views/quicklayout/backtop/backtop-4"),
             name: "backtop-4",
-            meta: { title: "backtop-4", icon: "form" }
+            meta: {
+              title: "backtop-4",
+              icon: "form"
+            }
           },
           {
             path: "backtop-5",
             component: () => import("@/views/quicklayout/backtop/backtop-5"),
             name: "backtop-5",
-            meta: { title: "backtop-5", icon: "form" }
+            meta: {
+              title: "backtop-5",
+              icon: "form"
+            }
           },
           {
             path: "backtop-6",
             component: () => import("@/views/quicklayout/backtop/backtop-6"),
             name: "backtop-6",
-            meta: { title: "backtop-6", icon: "form" }
+            meta: {
+              title: "backtop-6",
+              icon: "form"
+            }
           },
           {
             path: "backtop-7",
             component: () => import("@/views/quicklayout/backtop/backtop-7"),
             name: "backtop-7",
-            meta: { title: "backtop-7", icon: "form" }
+            meta: {
+              title: "backtop-7",
+              icon: "form"
+            }
           },
           {
             path: "backtop-8",
             component: () => import("@/views/quicklayout/backtop/backtop-8"),
             name: "backtop-8",
-            meta: { title: "backtop-8", icon: "form" }
+            meta: {
+              title: "backtop-8",
+              icon: "form"
+            }
           }
         ]
       },
@@ -131,26 +168,37 @@ export const constantRouterMap = [
         path: "loading",
         component: () => import("@/views/quicklayout/loading/index"), // Parent router-view
         name: "loading",
-        meta: { title: "loading", icon: "form" },
+        meta: {
+          title: "loading",
+          icon: "form"
+        },
         redirect: "/quicklayout/loading/loading1",
-        children: [
-          {
+        children: [{
             path: "loading1",
             component: () => import("@/views/quicklayout/loading/loading1"),
             name: "loading1",
-            meta: { title: "loading1", icon: "form" }
+            meta: {
+              title: "loading1",
+              icon: "form"
+            }
           },
           {
             path: "loading2",
             component: () => import("@/views/quicklayout/loading/loading2"),
             name: "loading2",
-            meta: { title: "loading2", icon: "form" }
+            meta: {
+              title: "loading2",
+              icon: "form"
+            }
           },
           {
             path: "loading3",
             component: () => import("@/views/quicklayout/loading/loading3"),
             name: "loading3",
-            meta: { title: "loading3", icon: "form" }
+            meta: {
+              title: "loading3",
+              icon: "form"
+            }
           }
         ]
       },
@@ -158,19 +206,28 @@ export const constantRouterMap = [
         path: "close",
         name: "close",
         component: () => import("@/views/quicklayout/close"),
-        meta: { title: "close", icon: "form" }
+        meta: {
+          title: "close",
+          icon: "form"
+        }
       },
       {
         path: "container-center",
         name: "container-center",
         component: () => import("@/views/quicklayout/container-center"),
-        meta: { title: "container-center", icon: "form" }
+        meta: {
+          title: "container-center",
+          icon: "form"
+        }
       },
       {
         path: "css3-selector",
         name: "css3-selector",
         component: () => import("@/views/quicklayout/css3-selector"),
-        meta: { title: "css3-selector", icon: "form" }
+        meta: {
+          title: "css3-selector",
+          icon: "form"
+        }
       }
     ]
   },
@@ -184,30 +241,41 @@ export const constantRouterMap = [
       icon: "nested"
     },
     alwaysShow: true,
-    children: [
-      {
+    children: [{
         path: "date",
         name: "date",
         component: () => import("@/views/toolFn/date"),
-        meta: { title: "date", icon: "form" }
+        meta: {
+          title: "date",
+          icon: "form"
+        }
       },
       {
         path: "operate",
         name: "operate",
         component: () => import("@/views/toolFn/operate"),
-        meta: { title: "operate", icon: "form" }
+        meta: {
+          title: "operate",
+          icon: "form"
+        }
       },
       {
         path: "throttle",
         name: "throttle",
         component: () => import("@/views/toolFn/throttle"),
-        meta: { title: "throttle", icon: "form" }
+        meta: {
+          title: "throttle",
+          icon: "form"
+        }
       },
       {
         path: "debounce",
         name: "debounce",
         component: () => import("@/views/toolFn/debounce"),
-        meta: { title: "debounce", icon: "form" }
+        meta: {
+          title: "debounce",
+          icon: "form"
+        }
       }
     ]
   },
@@ -221,24 +289,32 @@ export const constantRouterMap = [
       icon: "nested"
     },
     alwaysShow: true,
-    children: [
-      {
+    children: [{
         path: "base",
         name: "base",
         component: () => import("@/views/animation/base"),
-        meta: { title: "base", icon: "form" }
+        meta: {
+          title: "base",
+          icon: "form"
+        }
       },
       {
         path: "setTimeout",
         name: "setTimeout",
         component: () => import("@/views/animation/setTimeout"),
-        meta: { title: "setTimeout", icon: "form" }
+        meta: {
+          title: "setTimeout",
+          icon: "form"
+        }
       },
       {
         path: "requestAnimationFrame",
         name: "requestAnimationFrame",
         component: () => import("@/views/animation/requestAnimationFrame"),
-        meta: { title: "requestAnimation", icon: "form" }
+        meta: {
+          title: "requestAnimation",
+          icon: "form"
+        }
       }
     ]
   },
@@ -252,141 +328,182 @@ export const constantRouterMap = [
       icon: "nested"
     },
     alwaysShow: true,
-    children: [
-      {
-        path: "base",
-        name: "base",
-        component: () => import("@/views/regular/base"),
-        meta: { title: "base", icon: "form" }
+    children: [{
+      path: "base",
+      name: "base",
+      component: () => import("@/views/regular/base"),
+      meta: {
+        title: "base",
+        icon: "form"
       }
-    ]
+    }]
   },
   {
     path: "/gitoperate",
     component: Layout,
-    children: [
-      {
-        path: "index",
-        name: "git操作",
-        component: () => import("@/views/gitoperate/index"),
-        meta: { title: "git操作", icon: "form" }
+    children: [{
+      path: "index",
+      name: "git操作",
+      component: () => import("@/views/gitoperate/index"),
+      meta: {
+        title: "git操作",
+        icon: "form"
       }
-    ]
+    }]
   },
   {
     path: "/tools",
     component: Layout,
-    children: [
-      {
-        path: "index",
-        name: "常用工具",
-        component: () => import("@/views/tools/index"),
-        meta: { title: "常用工具", icon: "form" }
+    children: [{
+      path: "index",
+      name: "常用工具",
+      component: () => import("@/views/tools/index"),
+      meta: {
+        title: "常用工具",
+        icon: "form"
       }
-    ]
+    }]
   },
   {
     path: "/blogs",
     component: Layout,
-    children: [
-      {
-        path: "index",
-        name: "常看博客",
-        component: () => import("@/views/blogs/index"),
-        meta: { title: "常看博客", icon: "form" }
+    children: [{
+      path: "index",
+      name: "常看博客",
+      component: () => import("@/views/blogs/index"),
+      meta: {
+        title: "常看博客",
+        icon: "form"
       }
-    ]
+    }]
   },
   {
     path: "/plugins",
     component: Layout,
-    children: [
-      {
-        path: "index",
-        name: "常用插件",
-        component: () => import("@/views/plugins/index"),
-        meta: { title: "常用插件", icon: "form" }
+    children: [{
+      path: "index",
+      name: "常用插件",
+      component: () => import("@/views/plugins/index"),
+      meta: {
+        title: "常用插件",
+        icon: "form"
       }
-    ]
+    }]
   },
   {
     path: "/creativeLab",
     component: Layout,
-    children: [
-      {
-        path: "index",
-        name: "创意实验室",
-        component: () => import("@/views/creativeLab/index"),
-        meta: { title: "创意实验室", icon: "form" }
+    children: [{
+      path: "index",
+      name: "创意实验室",
+      component: () => import("@/views/creativeLab/index"),
+      meta: {
+        title: "创意实验室",
+        icon: "form"
       }
-    ]
+    }]
   },
   {
     path: "/myTracks",
     component: Layout,
-    children: [
-      {
-        path: "index",
-        name: "我的足迹",
-        component: () => import("@/views/myTracks/index"),
-        meta: { title: "我的足迹", icon: "form" }
+    children: [{
+      path: "index",
+      name: "我的足迹",
+      component: () => import("@/views/myTracks/index"),
+      meta: {
+        title: "我的足迹",
+        icon: "form"
       }
-    ]
+    }]
   },
   {
     path: "external-link",
     component: Layout,
-    children: [
-      {
-        path: "https://github.com/gitkingchen",
-        name: "开源项目",
-        meta: { title: "开源项目", icon: "form" }
+    children: [{
+      path: "https://github.com/gitkingchen",
+      name: "开源项目",
+      meta: {
+        title: "开源项目",
+        icon: "form"
       }
-    ]
+    }]
   },
   {
     path: "/myshare",
     component: Layout,
-    children: [
-      {
-        path: "index",
-        name: "我的分享",
-        component: () => import("@/views/myshare/index"),
-        meta: { title: "我的分享", icon: "form" }
+    children: [{
+      path: "index",
+      name: "我的分享",
+      component: () => import("@/views/myshare/index"),
+      meta: {
+        title: "我的分享",
+        icon: "form"
       }
-    ]
+    }]
   },
   {
     path: "/mybooks",
     component: Layout,
-    children: [
-      {
-        path: "index",
-        name: "读过的书",
-        component: () => import("@/views/mybooks/index"),
-        meta: { title: "读过的书", icon: "form" }
+    children: [{
+      path: "index",
+      name: "读过的书",
+      component: () => import("@/views/mybooks/index"),
+      meta: {
+        title: "读过的书",
+        icon: "form"
       }
-    ]
+    }]
   },
   {
     path: "/aboutme",
     component: Layout,
-    children: [
-      {
-        path: "index",
-        name: "关于我",
-        component: () => import("@/views/aboutme/index"),
-        meta: { title: "关于我", icon: "form" }
+    children: [{
+      path: "index",
+      name: "关于我",
+      component: () => import("@/views/aboutme/index"),
+      meta: {
+        title: "关于我",
+        icon: "form"
       }
-    ]
+    }]
+  }, {
+    path: "/recommend",
+    component: Layout,
+    children: [{
+      path: "index",
+      name: "推荐",
+      component: () => import("@/views/recommend/index"),
+      meta: {
+        title: "推荐",
+        icon: "form"
+      }
+    }]
+  }, {
+    path: "/resume",
+    component: Layout,
+    children: [{
+      path: "index",
+      name: "简历",
+      component: () => import("@/views/resume/index"),
+      meta: {
+        title: "简历",
+        icon: "form"
+      }
+    }]
   },
-  
 
-  { path: "*", redirect: "/404", hidden: true }
+
+  {
+    path: "*",
+    redirect: "/404",
+    hidden: true
+  }
 ];
 
 export default new Router({
   // mode: 'history', //后端支持可开
-  scrollBehavior: () => ({ y: 0 }),
+  scrollBehavior: () => ({
+    y: 0
+  }),
   routes: constantRouterMap
 });
