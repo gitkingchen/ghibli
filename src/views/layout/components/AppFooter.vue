@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: "AppFooter"
+    name: "AppFooter",
 };
 </script>
 
@@ -18,6 +18,6 @@ export default {
     text-align: center;
     font-weight: bold;
     font-size: 18px;
-    padding: 0 0 20px 0;
+    padding: 20px 0;
 }
 </style>
