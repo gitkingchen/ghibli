@@ -364,19 +364,19 @@ export const constantRouterMap = [{
       }
     }]
   },
-  {
-    path: "/blogs",
-    component: Layout,
-    children: [{
-      path: "index",
-      name: "常看博客",
-      component: () => import("@/views/blogs/index"),
-      meta: {
-        title: "常看博客",
-        icon: "form"
-      }
-    }]
-  },
+  //   {
+  //     path: "/blogs",
+  //     component: Layout,
+  //     children: [{
+  //       path: "index",
+  //       name: "常看博客",
+  //       component: () => import("@/views/blogs/index"),
+  //       meta: {
+  //         title: "常看博客",
+  //         icon: "form"
+  //       }
+  //     }]
+  //   },
   {
     path: "/plugins",
     component: Layout,
@@ -441,44 +441,46 @@ export const constantRouterMap = [{
       }
     }]
   },
+  //   {
+  //     path: "/mybooks",
+  //     component: Layout,
+  //     children: [{
+  //       path: "index",
+  //       name: "读过的书",
+  //       component: () => import("@/views/mybooks/index"),
+  //       meta: {
+  //         title: "读过的书",
+  //         icon: "form"
+  //       }
+  //     }]
+  //   },
+  //   {
+  //     path: "/aboutme",
+  //     component: Layout,
+  //     children: [{
+  //       path: "index",
+  //       name: "关于我",
+  //       component: () => import("@/views/aboutme/index"),
+  //       meta: {
+  //         title: "关于我",
+  //         icon: "form"
+  //       }
+  //     }]
+  //   },
+  //   {
+  //     path: "/recommend",
+  //     component: Layout,
+  //     children: [{
+  //       path: "index",
+  //       name: "推荐",
+  //       component: () => import("@/views/recommend/index"),
+  //       meta: {
+  //         title: "推荐",
+  //         icon: "form"
+  //       }
+  //     }]
+  //   },
   {
-    path: "/mybooks",
-    component: Layout,
-    children: [{
-      path: "index",
-      name: "读过的书",
-      component: () => import("@/views/mybooks/index"),
-      meta: {
-        title: "读过的书",
-        icon: "form"
-      }
-    }]
-  },
-  {
-    path: "/aboutme",
-    component: Layout,
-    children: [{
-      path: "index",
-      name: "关于我",
-      component: () => import("@/views/aboutme/index"),
-      meta: {
-        title: "关于我",
-        icon: "form"
-      }
-    }]
-  }, {
-    path: "/recommend",
-    component: Layout,
-    children: [{
-      path: "index",
-      name: "推荐",
-      component: () => import("@/views/recommend/index"),
-      meta: {
-        title: "推荐",
-        icon: "form"
-      }
-    }]
-  }, {
     path: "/resume",
     component: Layout,
     children: [{

@@ -21,7 +21,7 @@
                                 <td>出生日期：1990-07-04</td>
                             </tr>
                             <tr>
-                                <td>院校：河北大学</td>
+                                <td>院校：河北大学（2009—2013）</td>
                                 <td>学历：本科</td>
                                 <td>主修专业：自动化</td>
                             </tr>
@@ -59,14 +59,14 @@
                                                 title="一个有想法就想建个库"
                                             >https://github.com/gitkingchen</a>
                                         </div>
-                                        <div>
+                                        <!-- <div>
                                             <span>掘金：</span>
                                             <a
                                                 href="https://juejin.im/user/1556564194631101"
                                                 target="_blank"
                                                 title=""
                                             >https://juejin.im/user/1556564194631101</a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </td>
 
@@ -82,7 +82,17 @@
                             src="https://p3.ssl.qhimg.com/t01a23993f6622e75d5.png"
                             alt=""
                         >
-                        <span>我的技能</span>
+                        <span>工作经验</span>
+                    </div>
+                </div>
+
+                <div class="resume-box">
+                    <div class="tit">
+                        <img
+                            src="https://p3.ssl.qhimg.com/t01a23993f6622e75d5.png"
+                            alt=""
+                        >
+                        <span>吃饭家伙</span>
                     </div>
 
                     <echart
@@ -91,6 +101,25 @@
                     >
                     </echart>
 
+                </div>
+                <div class="resume-box">
+                    <div class="tit">
+                        <img
+                            src="https://p3.ssl.qhimg.com/t01a23993f6622e75d5.png"
+                            alt=""
+                        >
+                        <span>乘风破浪</span>
+                    </div>
+                </div>
+                <div class="resume-box">
+                    <div class="tit">
+                        <img
+                            src="https://p3.ssl.qhimg.com/t01a23993f6622e75d5.png"
+                            alt=""
+                        >
+                        <span>往事如烟</span>
+                    </div>
+                    <aboutme />
                 </div>
 
             </div>
@@ -102,7 +131,7 @@
 .resume-container {
     background-image: url(https://p5.ssl.qhimg.com/t01d08cfd2d537ebf4a.png);
     background-size: cover;
-    height: calc(100vh - 50px);
+    // min-height: calc(100vh - 50px);
     padding: 20px 20px;
     overflow: hidden;
     position: relative;
@@ -153,6 +182,13 @@
                 width: 1000px;
                 min-height: 300px;
                 margin: 0 auto;
+
+                .app-container {
+                    color: #f3f3f3;
+                    p:before {
+                        background-color: #b7b7b7;
+                    }
+                }
             }
 
             .tit {
@@ -184,10 +220,12 @@
 
 <script>
 import Echart from "@/components/charts/Echart.vue";
+import Aboutme from "@/views/aboutme";
 
 export default {
     components: {
         Echart,
+        Aboutme,
     },
     data() {
         return {
