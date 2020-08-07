@@ -2,7 +2,7 @@
     <div class="app-container">
         <div
             ref="chart"
-            style="width:1200px;height:700px;"
+            style="width:100%;height:620px;"
         ></div>
     </div>
 </template>
@@ -588,12 +588,12 @@ export default {
                         label: {
                             emphasis: {
                                 show: true,
-                                color: "red",
+                                color: "#111",
                             },
                         },
                         itemStyle: {
                             normal: {
-                                areaColor: "#F7FBFF",
+                                areaColor: "#ededed",
                                 borderColor: "#8C98A0",
                             },
                             emphasis: {

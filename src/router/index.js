@@ -36,7 +36,7 @@ export const constantRouterMap = [{
   {
     path: "/",
     component: Layout,
-    redirect: "/quicklayout"
+    redirect: "/resume"
     // name: '常用布局',
     // hidden: true,
     // children: [{
@@ -403,19 +403,19 @@ export const constantRouterMap = [{
       }
     }]
   },
-  {
-    path: "/myTracks",
-    component: Layout,
-    children: [{
-      path: "index",
-      name: "我的足迹",
-      component: () => import("@/views/myTracks/index"),
-      meta: {
-        title: "我的足迹",
-        icon: "form"
-      }
-    }]
-  },
+  //   {
+  //     path: "/myTracks",
+  //     component: Layout,
+  //     children: [{
+  //       path: "index",
+  //       name: "我的足迹",
+  //       component: () => import("@/views/myTracks/index"),
+  //       meta: {
+  //         title: "我的足迹",
+  //         icon: "form"
+  //       }
+  //     }]
+  //   },
   {
     path: "external-link",
     component: Layout,
@@ -483,6 +483,7 @@ export const constantRouterMap = [{
   {
     path: "/resume",
     component: Layout,
+    redirect: "/resume/index",
     children: [{
       path: "index",
       name: "简历",

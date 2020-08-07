@@ -95,11 +95,13 @@
                         <span>吃饭家伙</span>
                     </div>
 
-                    <echart
-                        :data="chart.skills.data"
-                        :conf="chart.skills.conf"
-                    >
-                    </echart>
+                    <div class="chart-container">
+                        <echart
+                            :data="chart.skills.data"
+                            :conf="chart.skills.conf"
+                        >
+                        </echart>
+                    </div>
 
                 </div>
                 <div class="resume-box">
@@ -109,6 +111,9 @@
                             alt=""
                         >
                         <span>乘风破浪</span>
+                    </div>
+                    <div class="chart-container">
+                        <mytracks />
                     </div>
                 </div>
                 <div class="resume-box">
@@ -189,6 +194,10 @@
                         background-color: #b7b7b7;
                     }
                 }
+
+                .chart-container {
+                    height: 660px;
+                }
             }
 
             .tit {
@@ -221,11 +230,104 @@
 <script>
 import Echart from "@/components/charts/Echart.vue";
 import Aboutme from "@/views/aboutme";
+import Mytracks from "@/views/mytracks";
+const maxVal = 100;
+const skills = [
+    {
+        text: "vue",
+        val: 85,
+    },
+    {
+        text: "jq",
+        val: 85,
+    },
+    {
+        text: "react/react native",
+        val: 30,
+    },
+    {
+        text: "小程序开发（uni-app）",
+        val: 79,
+    },
+    {
+        text: "移动web开发（vue/jq）",
+        val: 80,
+    },
+    {
+        text: "Echarts",
+        val: 85,
+    },
+    {
+        text: "D3",
+        val: 60,
+    },
+    {
+        text: "Antv",
+        val: 70,
+    },
+    {
+        text: "Threejs",
+        val: 20,
+    },
+    {
+        text: "bootstrap",
+        val: 80,
+    },
+    {
+        text: "Linux",
+        val: 64,
+    },
+    {
+        text: "Python",
+        val: 40,
+    },
+    {
+        text: "Nodejs",
+        val: 70,
+    },
+    {
+        text: "Webpack/gulp",
+        val: 68,
+    },
+    {
+        text: "chrome扩展开发",
+        val: 50,
+    },
+    {
+        text: "计算机网络",
+        val: 70,
+    },
+    {
+        text: "Nginx",
+        val: 67,
+    },
+    {
+        text: "Element UI",
+        val: 86,
+    },
+    {
+        text: "Mongodb",
+        val: 70,
+    },
+    {
+        text: "Docker",
+        val: 76,
+    },
+];
+const skillsArr = skills.map((item) => {
+    item.max = maxVal;
+    return item;
+});
+
+const skillValArr = skills.map((item) => {
+    return item.val;
+});
 
 export default {
     components: {
         Echart,
         Aboutme,
+        Mytracks,
     },
     data() {
         return {
@@ -238,27 +340,15 @@ export default {
                         color: ["#4A99FF", "#4BFFFC"],
                         radar: {
                             // shape: 'circle',
-                            center: ["50%", "65%"],
+                            splitNumber: 2,
+                            //center: ["50%"],
                             name: {
                                 textStyle: {
                                     color: "#fff",
                                     fontSize: 16,
                                 },
                             },
-                            indicator: [
-                                {
-                                    text: "vue",
-                                    max: 5000,
-                                },
-                                {
-                                    text: "jquery",
-                                    max: 5000,
-                                },
-                                {
-                                    text: "react",
-                                    max: 5000,
-                                },
-                            ],
+                            indicator: skillsArr,
                             splitArea: {
                                 // 坐标轴在 grid 区域中的分隔区域，默认不显示。
                                 show: true,
@@ -287,10 +377,10 @@ export default {
                         series: [
                             {
                                 type: "radar",
-                                symbolSize: 9,
+                                symbolSize: 10,
                                 data: [
                                     {
-                                        value: [4000, 1000, 2000],
+                                        value: skillValArr,
                                         //name: legendData[1],
                                         itemStyle: {
                                             normal: {
