@@ -45,13 +45,27 @@ export const constantRouterMap = [{
     // }]
   },
   {
+    path: "/resume",
+    component: Layout,
+    redirect: "/resume/index",
+    children: [{
+      path: "index",
+      name: "关于我",
+      component: () => import("@/views/resume/index"),
+      meta: {
+        title: "关于我",
+        icon: "resume"
+      }
+    }]
+  },
+  {
     path: "/quicklayout",
     component: Layout,
     redirect: "/quicklayout/image-text",
     name: "quicklayout",
     meta: {
-      title: "常用布局",
-      icon: "nested"
+      title: "布局片段",
+      icon: "layout"
     },
     alwaysShow: true,
     children: [{
@@ -60,7 +74,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/quicklayout/image-text"),
         meta: {
           title: "image-text",
-          icon: "form"
+          icon: ""
         }
       },
       {
@@ -69,7 +83,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/quicklayout/icon-text"),
         meta: {
           title: "icon-text",
-          icon: "form"
+          icon: ""
         }
       },
       {
@@ -78,7 +92,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/quicklayout/css3-scrollbar"),
         meta: {
           title: "css3-scrollbar",
-          icon: "form"
+          icon: ""
         }
       },
       {
@@ -87,7 +101,7 @@ export const constantRouterMap = [{
         name: "backtop",
         meta: {
           title: "backtop(0/anchor)",
-          icon: "form"
+          icon: ""
         },
         redirect: "/quicklayout/backtop/backtop-1",
         children: [{
@@ -96,7 +110,7 @@ export const constantRouterMap = [{
             name: "backtop-1",
             meta: {
               title: "backtop-1",
-              icon: "form"
+              icon: ""
             }
           },
           {
@@ -105,7 +119,7 @@ export const constantRouterMap = [{
             name: "backtop-2",
             meta: {
               title: "backtop-2",
-              icon: "form"
+              icon: ""
             }
           },
           {
@@ -114,7 +128,7 @@ export const constantRouterMap = [{
             name: "backtop-3",
             meta: {
               title: "backtop-3",
-              icon: "form"
+              icon: ""
             }
           },
           {
@@ -123,7 +137,7 @@ export const constantRouterMap = [{
             name: "backtop-4",
             meta: {
               title: "backtop-4",
-              icon: "form"
+              icon: ""
             }
           },
           {
@@ -132,7 +146,7 @@ export const constantRouterMap = [{
             name: "backtop-5",
             meta: {
               title: "backtop-5",
-              icon: "form"
+              icon: ""
             }
           },
           {
@@ -141,7 +155,7 @@ export const constantRouterMap = [{
             name: "backtop-6",
             meta: {
               title: "backtop-6",
-              icon: "form"
+              icon: ""
             }
           },
           {
@@ -150,7 +164,7 @@ export const constantRouterMap = [{
             name: "backtop-7",
             meta: {
               title: "backtop-7",
-              icon: "form"
+              icon: ""
             }
           },
           {
@@ -159,7 +173,7 @@ export const constantRouterMap = [{
             name: "backtop-8",
             meta: {
               title: "backtop-8",
-              icon: "form"
+              icon: ""
             }
           }
         ]
@@ -170,7 +184,7 @@ export const constantRouterMap = [{
         name: "loading",
         meta: {
           title: "loading",
-          icon: "form"
+          icon: ""
         },
         redirect: "/quicklayout/loading/loading1",
         children: [{
@@ -179,7 +193,7 @@ export const constantRouterMap = [{
             name: "loading1",
             meta: {
               title: "loading1",
-              icon: "form"
+              icon: ""
             }
           },
           {
@@ -188,7 +202,7 @@ export const constantRouterMap = [{
             name: "loading2",
             meta: {
               title: "loading2",
-              icon: "form"
+              icon: ""
             }
           },
           {
@@ -197,7 +211,7 @@ export const constantRouterMap = [{
             name: "loading3",
             meta: {
               title: "loading3",
-              icon: "form"
+              icon: ""
             }
           }
         ]
@@ -208,7 +222,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/quicklayout/close"),
         meta: {
           title: "close",
-          icon: "form"
+          icon: ""
         }
       },
       {
@@ -217,7 +231,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/quicklayout/container-center"),
         meta: {
           title: "container-center",
-          icon: "form"
+          icon: ""
         }
       },
       {
@@ -226,7 +240,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/quicklayout/css3-selector"),
         meta: {
           title: "css3-selector",
-          icon: "form"
+          icon: ""
         }
       }
     ]
@@ -238,7 +252,7 @@ export const constantRouterMap = [{
     name: "工具函数",
     meta: {
       title: "工具函数",
-      icon: "nested"
+      icon: "fx"
     },
     alwaysShow: true,
     children: [{
@@ -247,7 +261,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/toolFn/date"),
         meta: {
           title: "date",
-          icon: "form"
+          icon: ""
         }
       },
       {
@@ -256,7 +270,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/toolFn/operate"),
         meta: {
           title: "operate",
-          icon: "form"
+          icon: ""
         }
       },
       {
@@ -265,7 +279,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/toolFn/throttle"),
         meta: {
           title: "throttle",
-          icon: "form"
+          icon: ""
         }
       },
       {
@@ -274,7 +288,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/toolFn/debounce"),
         meta: {
           title: "debounce",
-          icon: "form"
+          icon: ""
         }
       }
     ]
@@ -286,7 +300,7 @@ export const constantRouterMap = [{
     name: "animation",
     meta: {
       title: "动画操作",
-      icon: "nested"
+      icon: "animation"
     },
     alwaysShow: true,
     children: [{
@@ -295,7 +309,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/animation/base"),
         meta: {
           title: "base",
-          icon: "form"
+          icon: ""
         }
       },
       {
@@ -304,7 +318,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/animation/setTimeout"),
         meta: {
           title: "setTimeout",
-          icon: "form"
+          icon: ""
         }
       },
       {
@@ -313,7 +327,7 @@ export const constantRouterMap = [{
         component: () => import("@/views/animation/requestAnimationFrame"),
         meta: {
           title: "requestAnimation",
-          icon: "form"
+          icon: ""
         }
       }
     ]
@@ -321,20 +335,20 @@ export const constantRouterMap = [{
   {
     path: "/regular",
     component: Layout,
-    redirect: "/regular/base",
-    name: "regular",
-    meta: {
-      title: "正则",
-      icon: "nested"
-    },
-    alwaysShow: true,
+    // redirect: "/regular/base",
+    // name: "regular",
+    // meta: {
+    //   title: "正则",
+    //   icon: "regular"
+    // },
+    //alwaysShow: true,
     children: [{
-      path: "base",
-      name: "base",
+      path: "index",
+      name: "正则笔记",
       component: () => import("@/views/regular/base"),
       meta: {
-        title: "base",
-        icon: "form"
+        title: "正则笔记",
+        icon: "regular"
       }
     }]
   },
@@ -347,7 +361,7 @@ export const constantRouterMap = [{
       component: () => import("@/views/gitoperate/index"),
       meta: {
         title: "git操作",
-        icon: "form"
+        icon: "git"
       }
     }]
   },
@@ -360,7 +374,7 @@ export const constantRouterMap = [{
       component: () => import("@/views/tools/index"),
       meta: {
         title: "常用工具",
-        icon: "form"
+        icon: "tools"
       }
     }]
   },
@@ -377,29 +391,29 @@ export const constantRouterMap = [{
   //       }
   //     }]
   //   },
-  {
-    path: "/plugins",
-    component: Layout,
-    children: [{
-      path: "index",
-      name: "常用插件",
-      component: () => import("@/views/plugins/index"),
-      meta: {
-        title: "常用插件",
-        icon: "form"
-      }
-    }]
-  },
+  //   {
+  //     path: "/plugins",
+  //     component: Layout,
+  //     children: [{
+  //       path: "index",
+  //       name: "常用插件",
+  //       component: () => import("@/views/plugins/index"),
+  //       meta: {
+  //         title: "常用插件",
+  //         icon: "plugins"
+  //       }
+  //     }]
+  //   },
   {
     path: "/creativeLab",
     component: Layout,
     children: [{
       path: "index",
-      name: "创意实验室",
+      name: "Lab",
       component: () => import("@/views/creativeLab/index"),
       meta: {
-        title: "创意实验室",
-        icon: "form"
+        title: "Lab",
+        icon: "lab"
       }
     }]
   },
@@ -417,27 +431,27 @@ export const constantRouterMap = [{
   //     }]
   //   },
   {
-    path: "external-link",
-    component: Layout,
-    children: [{
-      path: "https://github.com/gitkingchen",
-      name: "开源项目",
-      meta: {
-        title: "开源项目",
-        icon: "form"
-      }
-    }]
-  },
-  {
     path: "/myshare",
     component: Layout,
     children: [{
       path: "index",
-      name: "我的分享",
+      name: "Share",
       component: () => import("@/views/myshare/index"),
       meta: {
-        title: "我的分享",
-        icon: "form"
+        title: "Share",
+        icon: "share"
+      }
+    }]
+  },
+  {
+    path: "external-link",
+    component: Layout,
+    children: [{
+      path: "https://github.com/gitkingchen",
+      name: "GitHub",
+      meta: {
+        title: "GitHub",
+        icon: "github"
       }
     }]
   },
@@ -480,20 +494,7 @@ export const constantRouterMap = [{
   //       }
   //     }]
   //   },
-  {
-    path: "/resume",
-    component: Layout,
-    redirect: "/resume/index",
-    children: [{
-      path: "index",
-      name: "简历",
-      component: () => import("@/views/resume/index"),
-      meta: {
-        title: "简历",
-        icon: "form"
-      }
-    }]
-  },
+
 
 
   {
