@@ -322,8 +322,8 @@
 
 <script>
 import Echart from "@/components/charts/Echart.vue";
-import Aboutme from "@/views/aboutme";
-import Mytracks from "@/views/mytracks";
+import Aboutme from "@/views/aboutme.vue";
+import Mytracks from "@/views/mytracks.vue";
 const maxVal = 100;
 const skills = [
     {
