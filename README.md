@@ -1,14 +1,17 @@
 个人网站
 
-> 涵盖总结的知识点以及生活
+> 用于总结知识点以及技术实验
 
 ### 技术栈
 
-- Vue2.0
-- Vue-Router
+- Vue
 - Element-UI
 - Axios
 - Echarts
+- Express
+- Mongodb
+- Webhooks
+
 
 
 ---
