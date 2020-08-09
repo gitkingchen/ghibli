@@ -404,22 +404,23 @@ export const constantRouterMap = [{
   //       }
   //     }]
   //   },
-  {
-    path: "/creativeLab",
-    component: Layout,
-    children: [{
-      path: "index",
-      name: "Lab",
-      component: () => import("@/views/creativeLab/index"),
-      meta: {
-        title: "Lab",
-        icon: "lab"
-      }
-    }]
-  },
+  //   {
+  //     path: "/creativeLab",
+  //     component: Layout,
+  //     children: [{
+  //       path: "index",
+  //       name: "Lab",
+  //       component: () => import("@/views/creativeLab/index"),
+  //       meta: {
+  //         title: "Lab",
+  //         icon: "lab"
+  //       }
+  //     }]
+  //   },
   //   {
   //     path: "/myTracks",
   //     component: Layout,
+  //     hidden: true,
   //     children: [{
   //       path: "index",
   //       name: "我的足迹",
