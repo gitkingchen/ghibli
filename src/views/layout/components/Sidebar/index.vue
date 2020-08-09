@@ -1,4 +1,5 @@
 <template>
+
     <el-scrollbar wrap-class="scrollbar-wrapper">
         <el-menu
             :show-timeout="200"
@@ -17,6 +18,7 @@
             />
         </el-menu>
     </el-scrollbar>
+
 </template>
 
 <script>

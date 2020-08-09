@@ -2,13 +2,12 @@
     <div class="app-container">
         <div
             ref="chart"
-            style="width:1200px;height:700px;"
+            style="width:100%;height:620px;"
         ></div>
     </div>
 </template>
 
-<style rel="stylesheet/scss" lang="scss" scoped>
-</style>
+<style rel="stylesheet/scss" lang="scss" scoped></style>
 <script>
 // import echarts from 'echarts';
 // import 'echarts/map/js/china';
@@ -588,12 +587,12 @@ export default {
                         label: {
                             emphasis: {
                                 show: true,
-                                color: "red",
+                                color: "#111",
                             },
                         },
                         itemStyle: {
                             normal: {
-                                areaColor: "#F7FBFF",
+                                areaColor: "#ededed",
                                 borderColor: "#8C98A0",
                             },
                             emphasis: {
@@ -612,12 +611,13 @@ export default {
                     title: [
                         {
                             text: "我的足迹",
-                            subtext: "那些年走过的路，趟过的水\n点标记查看游记",
+                            //subtext: "那些年走过的路，趟过的水\n点标记查看游记",
+                            subtext: "世界辣么大，我想去瞅瞅~",
                             left: "75%",
                             top: "8%",
                             textStyle: {
                                 color: "#04B9FF",
-                                fontSize: 30,
+                                fontSize: 26,
                             },
                             subtextStyle: {
                                 color: "#fff",

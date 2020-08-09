@@ -10,12 +10,13 @@
 
   // 侧边栏
   .sidebar-container {
+    padding-top: 60px;
     transition: width 0.28s;
     width: $sideBarWidth !important;
     height: 100%;
     position: fixed;
     font-size: 0px;
-    top: 0;
+    top: 0px;
     bottom: 0;
     left: 0;
     z-index: 1001;
@@ -64,7 +65,7 @@
   }
 
   .hideSidebar {
-    .sidebar-container {
+    .sidebar-container ,.site-logo{
       width: 36px !important;
     }
 
@@ -158,6 +159,6 @@
   }
 }
 
-.el-submenu__title i{
-  color:#fff;
+.el-submenu__title i {
+  color: #fff;
 }

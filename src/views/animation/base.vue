@@ -15,9 +15,9 @@
                 class="language-markup"
             >
                 <div class="demo_ani demo_1">
-            <div></div>
-        </div>
-      </script>
+                    <div></div>
+                </div>
+            </script>
 
             <pre><code class="language-scss">
         @keyframes move{
@@ -64,8 +64,8 @@
                 class="language-markup"
             >
                 <div class="demo_ani demo_2">
-            <div></div>
-        </div>
+                    <div></div>
+                </div>
       </script>
 
             <pre><code class="language-scss">
@@ -112,8 +112,8 @@
                 class="language-markup"
             >
                 <div class="demo_ani demo_3">
-            <div></div>
-        </div>
+                    <div></div>
+                </div>
       </script>
 
             <pre><code class="language-scss">
@@ -160,8 +160,8 @@
                 class="language-markup"
             >
                 <div class="demo_ani demo_4">
-            <div></div>
-        </div>
+                    <div></div>
+                </div>
       </script>
 
             <pre><code class="language-scss">
@@ -264,21 +264,17 @@ export default {
     },
     methods: {
         bindEvent() {
-            $(".demo_ani").on("click", function() {
-                $(this)
-                    .find("div")
-                    .addClass("move");
+            $(".demo_ani").on("click", function () {
+                $(this).find("div").addClass("move");
             });
 
-            $("#resetBtn").on("click", function() {
-                $.each($(".demo_ani"), function(index, el) {
-                    $(el)
-                        .find("div")
-                        .removeClass("move");
+            $("#resetBtn").on("click", function () {
+                $.each($(".demo_ani"), function (index, el) {
+                    $(el).find("div").removeClass("move");
                 });
             });
-        }
-    }
+        },
+    },
 };
 </script>
 
