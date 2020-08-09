@@ -4,7 +4,6 @@
 
 ### 技术栈
 
-- Vue
 - Element-UI
 - Axios
 - Echarts
